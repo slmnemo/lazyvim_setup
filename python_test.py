@@ -4,7 +4,7 @@ hi = "thislinehaswaytoomanycharactersbecauseitisliterallyarunonsentencepleasesom
 
 def hehe(test: str):
     main = dict()
-    main['estrogen'] = "c-20-12-2"
+    main['estrogen'] = "c-50-28-2"
     if type(test) is int:
         return "gay"
     else:

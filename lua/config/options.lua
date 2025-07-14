@@ -8,3 +8,6 @@ vim.g.autoformat = false
 -- Set max line size to 120 characters by Default
 vim.opt.textwidth = 120
 
+-- Turn on wrapping
+vim.opt.wrap = true
+

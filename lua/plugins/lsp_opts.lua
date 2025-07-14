@@ -6,17 +6,27 @@ return {
       --- Do not autoformat on save
       autoformat = false,
       -- Set desired line width for python codestyle
-      require("lspconfig").pylsp.setup{
+      require("lspconfig").pylsp.setup({
         settings = {
           pylsp = {
             plugins = {
               pycodestyle = {
-                maxLineLength = 120
-              }
-            }
-          }
-        }
-      }
+                maxLineLength = 120,
+              },
+            },
+          },
+        },
+      }),
+      servers = {
+        svlangserver = {
+          cmd = { "svlangserver" },
+          settings = {
+            systemverilog = {
+              formatCommand = "verible-verilog-format --column_limit 100 --indentation_spaces 4 --wrap_spaces 4 --port_declarations_alignment align",
+            },
+          },
+        },
+      },
     },
   },
 }
