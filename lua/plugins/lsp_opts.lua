@@ -10,6 +10,9 @@ return {
         settings = {
           pylsp = {
             plugins = {
+              flake8 = {
+                maxLineLength = 120,
+              },
               pycodestyle = {
                 maxLineLength = 120,
               },
