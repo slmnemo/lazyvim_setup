@@ -2,6 +2,7 @@ return {
   -- Disable LSP autoformatting
   {
     "neovim/nvim-lspconfig",
+    vim.cmd("LspStart"), -- Require lspconfig to be started before configuring servers
     opts = {
       --- Do not autoformat on save
       autoformat = false,

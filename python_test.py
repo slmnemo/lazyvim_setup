@@ -1,6 +1,8 @@
 from calan import gay
 
 hi = "thislinehaswaytoomanycharactersbecauseitisliterallyarunonsentencepleasesomeonestopmefromtypingthismuchintothisonelineohmygodshesstillgoingstopitkate"
+hi = "thislinehaswaytoomanycharactersbecauseitisliterallyarunonsentencepleasesomeonestopmestillovereightycharacters"
+
 
 def hehe(test: str):
     main = dict()
