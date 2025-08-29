@@ -2,26 +2,25 @@ return {
   -- Disable LSP autoformatting
   {
     "neovim/nvim-lspconfig",
-    vim.cmd("LspStart"), -- Require lspconfig to be started before configuring servers
     opts = {
       --- Do not autoformat on save
       autoformat = false,
       -- Set desired line width for python codestyle
-      require("lspconfig").pylsp.setup({
-        settings = {
-          pylsp = {
-            plugins = {
-              flake8 = {
-                maxLineLength = 120,
-              },
-              pycodestyle = {
-                maxLineLength = 120,
+      servers = {
+        pylsp = {
+          settings = {
+            pylsp = {
+              plugins = {
+                flake8 = {
+                  maxLineLength = 120,
+                },
+                pycodestyle = {
+                  maxLineLength = 120,
+                },
               },
             },
           },
         },
-      }),
-      servers = {
         svlangserver = {
           cmd = { "svlangserver" },
           settings = {
