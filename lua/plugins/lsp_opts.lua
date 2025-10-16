@@ -7,6 +7,17 @@ return {
       autoformat = false,
       -- Set desired line width for python codestyle
       servers = {
+        clangd = {
+          cmd = {
+            "clangd",
+            "--background-index",
+            "--clang-tidy",
+            "--header-insertion=iwyu",
+            "--completion-style=detailed",
+            "--function-arg-placeholders",
+            "--style='{BasedOnStyle: llvm, IndentWidth: 4}'", -- This is not supported yet
+          },
+        },
         pylsp = {
           settings = {
             pylsp = {
