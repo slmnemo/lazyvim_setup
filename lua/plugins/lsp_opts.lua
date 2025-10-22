@@ -3,9 +3,6 @@ return {
   {
     "neovim/nvim-lspconfig",
     opts = {
-      --- Do not autoformat on save
-      autoformat = false,
-      -- Set desired line width for python codestyle
       servers = {
         clangd = {
           cmd = {
@@ -18,6 +15,7 @@ return {
             "--style='{BasedOnStyle: llvm, IndentWidth: 4}'", -- This is not supported yet
           },
         },
+        -- Set desired line length for python
         pylsp = {
           settings = {
             pylsp = {
